@@ -436,6 +436,15 @@ li a:hover{
       flex-direction: column;
     }
   }
+  .footer{
+    display: flex;
+    justify-content: center;
+    width: 98vw;
+    margin: auto;
+  }
+  .footer div{
+    color: rgba(112, 128, 144, 0.689);
+  }
   @media (max-width:500px){
     .white-btn-container{
       flex-direction: column;
