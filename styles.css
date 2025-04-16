@@ -74,6 +74,8 @@ li a:hover{
   height: 100%;
   width: 100%;
   border-radius: 20px;
+  object-fit: cover;
+  object-position: center;
   transition: transform 0.75s ease-in-out;
 }
 
@@ -225,28 +227,63 @@ li a:hover{
     border-bottom: 2px solid white;
 }
 .slider-box{
-    background-color: rgb(75, 63, 63);
+    padding: 8px;
+    background-color: #456e65;
     position: absolute;
     height: 360px;
     width: 310px;
     border-radius: 20px;
     animation-fill-mode: both;
-    left: max(calc(270px * 5),100%);
+    left: max(calc(300px * 5),100%);
     animation: scroll-left 8s linear infinite;
     animation-play-state: running;
-    transition: ease-in-out 0.5s;
+    transition: ease-in-out 8s;
+    border: 1px solid slategray;
 }
 
 .slider-container:hover .slider-box{
     animation-play-state: paused;
 }
 .slider-box:hover{
-    background-color: rgb(119, 109, 109);
+    background-color: #68e2c35c;
+    border-color: white;
     scale: 1.05;
 }
+
+.slider-box:hover .slider-btn{
+  background-color:#8ef3dab8;
+  border-color: #92eb617e;
+  color: black;
+}
+
+.slider-header{
+  color: #7cf03d;
+  font-size: 25px;
+  margin: 10px 0px;
+}
+.slider-content{
+  height: 240px;
+  width: 290px;
+  color: #bdd7af;
+  font-size: 20px;
+  line-height: 25px;
+}
+.slider-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 10px;
+  transition: ease-in-out 0.5s;
+  gap: 6px;
+}
+
+
 @keyframes scroll-left{
     to{
-        left: -290px;
+        left: -310px;
     }
 }
 .box-1 {
